@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0CACDB35-ABCE-4702-A673-D0B20DA04EA3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>doublyLinkedList</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1308CADEA7A0B94FC81209E55FA3EEBB2DEDE59C</key>
+		<string>https://github.com/rutul24591/DSwithC-.git</string>
+		<key>FDBCB5A9275844D2BABD586D0316549878519D34</key>
+		<string>https://github.com/rutul24591/DSwithC-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>doublyLinkedList.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1308CADEA7A0B94FC81209E55FA3EEBB2DEDE59C</key>
+		<string>../../..</string>
+		<key>FDBCB5A9275844D2BABD586D0316549878519D34</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rutul24591/DSwithC-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FDBCB5A9275844D2BABD586D0316549878519D34</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1308CADEA7A0B94FC81209E55FA3EEBB2DEDE59C</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FDBCB5A9275844D2BABD586D0316549878519D34</string>
+			<key>IDESourceControlWCCName</key>
+			<string>doublyLinkedList</string>
+		</dict>
+	</array>
+</dict>
+</plist>
