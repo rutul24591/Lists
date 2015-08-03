@@ -9,6 +9,7 @@
 #define	LIST_H
 
 class List{
+    
 private:
     int count=0;
     int searchResult;
@@ -27,7 +28,8 @@ private:
     nodePtr curr;
     nodePtr temp;
     
-public: ///this is where functions are go/called
+ ///this is where functions are go/called
+public:
     List(); //classname and functions used in this linked list
     void addNode (int addData);
     void deleteNode(int deleteData);
@@ -36,6 +38,7 @@ public: ///this is where functions are go/called
     void getNth(int num);
     void insertFront(int insertData);
     void purge();
+    void secondToLast(nodePtr head, int num);
     
 };
 

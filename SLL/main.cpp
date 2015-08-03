@@ -15,13 +15,14 @@ using namespace std;
 int main(int argc, char** argv){
 
     List Rutul;  // class name(i.e List + list object name(i.e Rutul))
-
+    
     Rutul.addNode(2);  // Testing the code in the main method fo the functions created in the List.h
     Rutul.addNode(5);
     Rutul.addNode(10);
     Rutul.addNode(54);
     Rutul.addNode(24);
     Rutul.printList();
+    
     
     
     Rutul.deleteNode(10);   // Testing the deleteNode method

@@ -136,5 +136,25 @@ void List :: purge(){
         head = head -> next;
         delete temp;
     }
-    
 }
+
+void List :: secondToLast(nodePtr head, int num){
+    curr = head;
+    nodePtr behind = new node;
+    behind = head;
+    for( int i=0; i< num; i++){
+        if( curr -> next != NULL){
+            curr= curr-> next;
+        }else{
+            cout<< " The list is empty"<< endl;
+        }
+    }
+        while(curr -> next != NULL){
+            curr =  curr -> next;
+            behind = behind-> next;
+        }
+     cout<<  behind << endl;;
+    }
+    
+    
+
