@@ -11,6 +11,10 @@
 #include <iostream>
 #include <string>
 
+// Bubble sort with o(n^2) complexity as there are two for loops involved in this. its average case
+// complexity is also o(n^2) and worst case too.
+// we can improve this bubble sort algorithm by using a swapped flag that could give best case complexity
+// o(n).
 
 using namespace std;
 
@@ -30,6 +34,7 @@ int main(int argc,char ** argv) {
 
 
 void bubbleSort(int a[], int n){
+    
     for( int i= n-1;i >=0; i--){
         for(int j=0; j < i-1; j++){
             if(a[j] > a[j+1]){
@@ -45,3 +50,6 @@ void bubbleSort(int a[], int n){
         cout<< a[l]<<endl;
     }
 };
+
+
+
