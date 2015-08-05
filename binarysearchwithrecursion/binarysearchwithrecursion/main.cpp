@@ -35,10 +35,10 @@ int binarySearch(int a[],int i, int j, int key){
         if(a[mid] == key){
             return mid;
         }else if( a[mid] > key){
-            res=binarySearch(a,i,mid-1,key);
+            res=binarySearch(a,i,mid-1,key);            // recursive binarySearch function call
             return res;
         }else{
-            res=binarySearch(a,mid+1,j,key);
+            res=binarySearch(a,mid+1,j,key);            // recursive binarySearch function call
             return res;
         }
         res = mid;
