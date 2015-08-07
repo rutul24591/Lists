@@ -89,7 +89,7 @@ void List:: printList(){
 }
 
 void List:: getNth(int num){
-    count = 0;
+    count = 0
     curr = head;
     
     while(curr != NULL){
