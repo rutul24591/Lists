@@ -27,6 +27,8 @@ void preOrderPrint(node* root);
 void postOrderPrint(node* root);
 void inOrderPrint(node* root);
 void destroyTree(node* root);
+int countNodes(node* root);
+
 
 node* getNewNode(int data){
 
@@ -105,6 +107,33 @@ void destroyTree(node* root){
     
     }
 }
+
+
+/*node* removeNode(node* root, int data){
+        if( root == NULL)
+        {
+            return NULL;
+        }else if(root->data == data){
+        
+        
+        }else if()
+
+
+
+}*/
+
+int countNodes(node* root){
+    if( root == NULL)  // if root is null then there is nothing to count and return 0 of the count value.
+        return 0;
+    
+    else{
+        int count=1; // counting root node
+        count += countNodes(root->left); // count the right sided nodes form the root
+        count += countNodes(root->right); // count the left sided nodes from the root
+        return count;           // Returns the total count of all nodes.
+    }
+}
+
 int main(int argc, char **argv) {
     // insert code here...
     node* root= NULL;
@@ -117,28 +146,20 @@ int main(int argc, char **argv) {
     preOrderPrint(root);
     postOrderPrint(root);
     inOrderPrint(root);
-   
+    int result1 = countNodes(root);
+    cout<< result1 << endl;
     int num;
     cout<< "Enter the value of the number that is to be searched in the tree: "<< endl;
     cin>>num ;
     bool result = search(root,num);
-    if(  result == true){
+    if(result == true){
         cout<< " Looking for num in the tree... \n";
         cout<< " number found"<<endl;
     }else{
-        cout<< "Number not found in the tree."<<endl;
+        cout<< "Number not found in the tree." <<endl;
     }
+    
     // destroyTree(root);
     
    return 0;
 }
-
-
-
-
-
-
-
-
-
-
