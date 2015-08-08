@@ -26,6 +26,7 @@ bool search(node* root,int data);
 void preOrderPrint(node* root);
 void postOrderPrint(node* root);
 void inOrderPrint(node* root);
+void destroyTree(node* root);
 
 node* getNewNode(int data){
 
@@ -93,6 +94,17 @@ void  inOrderPrint(node* root){
     }
 
 }
+
+void destroyTree(node* root){
+
+    if(root != NULL){
+        destroyTree(root->left);
+        destroyTree(root->right);
+        cout<<" Destroying the tree: " << root-> data<< endl;
+        delete root;
+    
+    }
+}
 int main(int argc, char **argv) {
     // insert code here...
     node* root= NULL;
@@ -107,8 +119,8 @@ int main(int argc, char **argv) {
     inOrderPrint(root);
    
     int num;
-    cout << "Enter the value of the number that is to be searched in the tree: "<< endl;
-    cin >> num ;
+    cout<< "Enter the value of the number that is to be searched in the tree: "<< endl;
+    cin>>num ;
     bool result = search(root,num);
     if(  result == true){
         cout<< " Looking for num in the tree... \n";
@@ -116,6 +128,7 @@ int main(int argc, char **argv) {
     }else{
         cout<< "Number not found in the tree."<<endl;
     }
+    // destroyTree(root);
     
    return 0;
 }
