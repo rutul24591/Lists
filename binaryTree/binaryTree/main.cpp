@@ -25,6 +25,7 @@ node* getNewNode(int data);
 bool search(node* root,int data);
 void preOrderPrint(node* root);
 void postOrderPrint(node* root);
+void inOrderPrint(node* root);
 
 node* getNewNode(int data){
 
@@ -68,7 +69,7 @@ bool search(node* root, int data){
 
 void preOrderPrint(node* root){
     if( root != NULL){
-        cout << root -> data << "\n\n"<< endl;
+        cout << root -> data << "\n"<< endl;
          preOrderPrint( root->left );
          preOrderPrint( root->right );
     }
@@ -79,7 +80,16 @@ void postOrderPrint(node* root){
     if(root != NULL){
         postOrderPrint(root->left);
         postOrderPrint(root->right);
-        cout<< root->data <<"\n\n" <<endl;
+        cout<< root->data <<"\n" <<endl;
+    }
+
+}
+
+void  inOrderPrint(node* root){
+    if(root != NULL){
+        inOrderPrint(root->left);
+        cout<< root->data<<"\n"<<endl;
+        inOrderPrint(root->right);
     }
 
 }
@@ -94,6 +104,7 @@ int main(int argc, char **argv) {
     root = insert(root,37);
     preOrderPrint(root);
     postOrderPrint(root);
+    inOrderPrint(root);
    
     int num;
     cout << "Enter the value of the number that is to be searched in the tree: "<< endl;
