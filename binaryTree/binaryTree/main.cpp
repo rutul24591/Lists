@@ -72,7 +72,7 @@ bool search(node* root, int data){
 
 void preOrderPrint(node* root){
     if( root != NULL){
-        cout << root -> data << "\n"<< endl;
+        cout << root -> data << endl;
          preOrderPrint( root->left );
          preOrderPrint( root->right );
     }
@@ -83,7 +83,7 @@ void postOrderPrint(node* root){
     if(root != NULL){
         postOrderPrint(root->left);
         postOrderPrint(root->right);
-        cout<< root->data <<"\n" <<endl;
+        cout<< root->data <<endl;
     }
 
 }
@@ -91,7 +91,7 @@ void postOrderPrint(node* root){
 void  inOrderPrint(node* root){
     if(root != NULL){
         inOrderPrint(root->left);
-        cout<< root->data<<"\n"<<endl;
+        cout<< root->data<<endl;
         inOrderPrint(root->right);
     }
 
@@ -144,10 +144,12 @@ int main(int argc, char **argv) {
     root = insert(root,24);
     root = insert(root,37);
     preOrderPrint(root);
+    
     postOrderPrint(root);
+    
     inOrderPrint(root);
     int result1 = countNodes(root);
-    cout<< result1 << endl;
+    cout<< "The Total nodes present in the binary tree with root 5 are: \n\n "<< result1 << endl;
     int num;
     cout<< "Enter the value of the number that is to be searched in the tree: "<< endl;
     cin>>num ;
