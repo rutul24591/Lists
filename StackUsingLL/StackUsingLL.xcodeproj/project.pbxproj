@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		6521D8761B76E23500007156 /* StackUsingLL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StackUsingLL; sourceTree = BUILT_PRODUCTS_DIR; };
-		6521D8791B76E23500007156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6521D8791B76E23500007156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; };
 		6521D8801B76E6CC00007156 /* stach.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stach.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +234,7 @@
 				6521D87F1B76E23500007156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,9 +13,11 @@
 
 using namespace std;
 
-struct node{
+struct node
+{
     int data;
-    node** next;
+    struct node* left;
+    struct node* right;
 };
 
 void push(int data);
@@ -23,7 +25,7 @@ int pop(int data);
 bool isEmpty();
 
 void push(int data){
-    node n = new node(); //partial implementation.still needs work...
+    node* n;
     int top;
     n->data =data;
     n->next =top;
