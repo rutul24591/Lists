@@ -13,32 +13,32 @@
 
 using namespace std;
 
+
+struct stack *createStack(int max){
+    return NULL;
+}
+
 struct node
 {
     int data;
-    struct node* left;
-    struct node* right;
+    node* next;
 };
 
-void push(int data);
+void push(node **top,int data);
 int pop(int data);
 bool isEmpty();
 
-void push(int data){
-    node* n;
-    int top;
-    n->data =data;
-    n->next =top;
-    top=n;
-    
-
-
+void push(node **top,int data){
+    node* n= new node();
+    if( n == NULL){
+        n->data= data;
+        n->next= *top;
+        *top= n;
+    }
 }
 
-int main(int argc, const char * argv[]){
+int main(int argc, char **argv){
 
-   
-    
 
     
     return 0;
