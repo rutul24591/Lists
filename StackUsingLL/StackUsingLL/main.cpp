@@ -13,33 +13,27 @@
 
 using namespace std;
 
-
-struct stack *createStack(int max){
-    return NULL;
-}
-
-struct node
-{
+class node{
+public:
     int data;
     node* next;
 };
 
-void push(node **top,int data);
-int pop(int data);
-bool isEmpty();
-
-void push(node **top,int data){
-    node* n= new node();
-    if( n == NULL){
-        n->data= data;
-        n->next= *top;
-        *top= n;
-    }
-}
-
-int main(int argc, char **argv){
-
-
+class stackLL{
+    private:
+    node* top;
+    int count;
+    int capacity;
     
-    return 0;
-}
+    public:
+        stackLL(int max){
+            top = NULL;
+            capacity = max;
+            count = 0;
+        }
+    
+    
+    
+    
+    
+};
