@@ -10,6 +10,8 @@ struct node{
 
 	node* root;
 
+// Keeping these 2 functions private will prevent the main method from directly calling it.. Would be called bu only the BST class..
+	
 void AddLeafPrivate(int key, node* Ptr);
 void PrintInOrderPrivate(node* Ptr);
 
