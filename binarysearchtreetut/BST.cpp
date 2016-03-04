@@ -1,3 +1,7 @@
+// Binary search tree implementation
+// author: Rutul Amin@3.3.2016
+
+
 #include <iostream>
 #include <cstdlib>
 
@@ -72,4 +76,120 @@ void BST::PrintInOrderPrivate(node* Ptr){
 	}
 
 }
+
+BST::node* BST::ReturnNode(int key){
+	return ReturnNodePrivate(key, root);
+}
+
+BST::node* BST::ReturnNodePrivate(int key, node* Ptr){
+	if(Ptr != NULL){
+		if(Ptr->key == key){	// If the key that the pointer points is equal to the key that we want to find then simply return the pointer.
+			return Ptr;
+		}
+		else{
+			if(key < Ptr->key){		// If the key is smaller than the current key that the pointer is pointing then go left and recursivel y call teh returnNodePrivater function until the key is found..
+				return ReturnNodePrivate(key, Ptr->left);
+			}
+			else{
+				return ReturnNodePrivate(key, Ptr->right);
+			}
+		}
+	}
+	else{
+		return NULL;
+	}
+}
+
+int BST::ReturnRootKey(){
+	if( root != NULL){
+		return root->key;
+	}
+	else{
+		return -1000;
+	}
+}
+
+void BST::PrintChildren(int key){
+	node* Ptr = ReturnNode(key);   // will return the ptr of the key that was passed as the parameter
+
+	if(Ptr != NULL){
+		cout<< "Parent Node="<< Ptr->key<< endl;
+
+		Ptr->left == NULL? 									// Using the conditional operator for left side instead of using if..else 's'
+		cout<<"Left Child = NULL"<<endl : 
+		cout<< "Left Child =" << Ptr->left->key << endl;
+
+		Ptr->right == NULL?									// Using the conditional operator for right side instead of using if..else 's'
+		cout<<" Right Child = NULL"<<endl :
+		cout<< " Right Child =" << Ptr->right->key << endl;
+	}
+	else{
+		cout<< " The key" << key << "is not present in the tree";
+	}
+}
+
+int BST::FindSmallest(){
+	return FindSmallestPrivate(root);
+}
+
+int BST::FindSmallestPrivate(node* Ptr){
+	if(root == NULL){
+		cout<<"The tree is empty"<< endl;
+		return -1000;
+	}
+	else{									
+		if(Ptr->left != NULL){						// The smallest is always on the left side of the tree(following the greater on right of and smaller on left of root node rule)
+			return FindSmallestPrivate(Ptr->left);
+		}
+		else{
+			return Ptr->key;
+		}
+	}
+}
+
+int BST::FindLargest(){
+	return FindLargestPrivate(root);
+}
+
+int BST::FindLargestPrivate(node* Ptr){
+	if(root == NULL){
+		cout<< " The Tree is empty"<< endl;
+		return -1000;
+	}
+	else{
+		if(Ptr->right != NULL){
+			return FindLargestPrivate(Ptr->right);
+		}
+		else{
+			return Ptr->key;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

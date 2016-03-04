@@ -24,5 +24,16 @@ int main(){
 
 	cout<< "" << endl;
 
+	//myTree.PrintChildren(myTree.ReturnRootKey());   // will return key of the root node and then will print the children of that node..
+
+
+	// // Printing the children of all the nodes in the tree
+	// for(int i =0; i< 16; i++){
+	// 	myTree.PrintChildren(TreeKey[i]);  
+	// 	cout<< endl;
+	// }
+
+	cout<< "The Smallest key in the tree is :"<< myTree.FindSmallest()<< endl;
+	cout<< "The Largest Key in the tree is:" << myTree.FindLargest() << endl;
 	return 0;
 }
