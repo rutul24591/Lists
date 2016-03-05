@@ -17,6 +17,9 @@ void PrintInOrderPrivate(node* Ptr);
 node* ReturnNodePrivate(int key, node* Ptr);
 int FindSmallestPrivate(node* Ptr);  
 int FindLargestPrivate(node* Ptr);
+void RemoveNodePrivate(int key, node* parent);
+void RemoveRootMatch();
+
 
 public:
 
@@ -30,5 +33,5 @@ public:
 	void PrintChildren(int key);   // will use returnNode method
 	int FindSmallest();   
 	int FindLargest();         // will just find the smallest node in the tree
-
+	void RemoveNode(int key);
 };

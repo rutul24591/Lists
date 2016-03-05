@@ -166,21 +166,82 @@ int BST::FindLargestPrivate(node* Ptr){
 	}
 }
 
+void BST::RemoveNode(int key){
+	return RemoveNodePrivate(int key, root);	
+}
 
 
+void BST::RemoveNodePrivate(int key, node* parent){
+	if(root!= NULL){
+
+		if(root-> key == key){
+			RemoveRootMatch();
+		}
+		else{
+			if(key < parent->key && parent->left != NULL){
+				parent->left->key == key?				// conditional operator instead of if..else
+				RemoveMatch(int key, parent->left, true):
+				RemoveNodePrivate(int key, parent->left);
+			}
+			else if(key > parent->key && parent->right != NULL){
+				parent->right->key == key?				// conditional operator instead of if..else
+				RemoveMatch(int key,parent->right,false):
+				RemoveNodePrivate(int key, parent->right);
+			}
+			else{
+				cout<<" The key"<< key <<"was not found in the tree"<<endl;
+			}
+		}
+	}
+	else{
+		cout<<" The tree is empty"<<endl;
+	}
+}
 
 
+void BST::RemoveRootMatch(){
+	if(root!= NULL){
+		// We are taking three variables to store values of keys
+		node* delPtr = root;
+		int rootKey = root->key;
+		int smallestInRightSubtree;
+
+		// CASE 1 with no children
+		if(root->left == NULL && root->right == NULL){
+			root == NULL;
+			delete deletePtr;
+		}
+
+		// CASE 2 with only one children
+		else if(root->left == NULL && root->right != NULL){		// with only root pointing to just right and no left
+			root= root->right;
+			deletePtr->right = NULL;
+			delete deletePtr;
+			cout<<" The root node with key"<< rootKey<<"was deleted."<< "The new root now contains the key"<< root->key << endl;
+		}
 
 
+		else if(root->left != NULL && root->right == NULL){			// with only root pointing to just the left and no right
+			root= root->left;
+			deletePtr->left = NULL;
+			delete deletePtr;
+			cout<< " The root node with key"<< rootKey<<" was deleted."<<"Th new root now contains the key"<< root->key << endl;
+		}
 
+		// CASE 3 with two children
+		else{
+			smallestInRightSubtree = FindSmallestPrivate(root->right);
+			RemoveNodePrivate(smallestInRightSubtree, root);
+			root-> key = smallestInRightSubtree;
+			delete deletePtr;
+			cout<<" The root with the key"<< rootKey<< "was overwritten with key"<< root->key<< endl;
+		}
 
-
-
-
-
-
-
-
+	}
+	else{
+		cout<< "The tree is empty"<<endl;
+	}
+}
 
 
 
