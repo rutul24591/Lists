@@ -9,7 +9,7 @@ int main(){
 
 	int TreeKey[20]={50,76,21,4,32,64,51,15,14,100,83,2,3,70,89,80};
 	BST myTree;   // Create new object
-
+	int input;
 	cout<< "Printing the tree in order\n Before adding any numbers\n";
 
 	myTree.PrintInOrder();
@@ -35,5 +35,17 @@ int main(){
 
 	cout<< "The Smallest key in the tree is :"<< myTree.FindSmallest()<< endl;
 	cout<< "The Largest Key in the tree is:" << myTree.FindLargest() << endl;
+
+	cout<< " Enter the key value that you want to remove OR Enter -1 to stop the process"<<endl;
+	while(input != -1){
+		cout<<"Delete Node:";
+		cin>> input;
+		{
+			cout<< endl;
+			myTree.RemoveNode(input);
+			myTree.PrintInOrder();
+			cout<< endl;
+		}
+	}
 	return 0;
 }

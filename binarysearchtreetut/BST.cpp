@@ -167,7 +167,7 @@ int BST::FindLargestPrivate(node* Ptr){
 }
 
 void BST::RemoveNode(int key){
-	return RemoveNodePrivate(int key, root);	
+	return RemoveNodePrivate(key, root);	
 }
 
 
@@ -180,13 +180,13 @@ void BST::RemoveNodePrivate(int key, node* parent){
 		else{
 			if(key < parent->key && parent->left != NULL){
 				parent->left->key == key?				// conditional operator instead of if..else
-				RemoveMatch(int key, parent->left, true):
-				RemoveNodePrivate(int key, parent->left);
+				RemoveMatch(parent, parent->left, true):
+				RemoveNodePrivate(key, parent->left);
 			}
 			else if(key > parent->key && parent->right != NULL){
 				parent->right->key == key?				// conditional operator instead of if..else
-				RemoveMatch(int key,parent->right,false):
-				RemoveNodePrivate(int key, parent->right);
+				RemoveMatch(parent,parent->right,false):
+				RemoveNodePrivate(key, parent->right);
 			}
 			else{
 				cout<<" The key"<< key <<"was not found in the tree"<<endl;
@@ -208,23 +208,23 @@ void BST::RemoveRootMatch(){
 
 		// CASE 1 with no children
 		if(root->left == NULL && root->right == NULL){
-			root == NULL;
-			delete deletePtr;
+			root = NULL;
+			delete delPtr;
 		}
 
 		// CASE 2 with only one children
 		else if(root->left == NULL && root->right != NULL){		// with only root pointing to just right and no left
 			root= root->right;
-			deletePtr->right = NULL;
-			delete deletePtr;
+			delPtr->right = NULL;
+			delete delPtr;
 			cout<<" The root node with key"<< rootKey<<"was deleted."<< "The new root now contains the key"<< root->key << endl;
 		}
 
 
 		else if(root->left != NULL && root->right == NULL){			// with only root pointing to just the left and no right
 			root= root->left;
-			deletePtr->left = NULL;
-			delete deletePtr;
+			delPtr->left = NULL;
+			delete delPtr;
 			cout<< " The root node with key"<< rootKey<<" was deleted."<<"Th new root now contains the key"<< root->key << endl;
 		}
 
@@ -233,7 +233,7 @@ void BST::RemoveRootMatch(){
 			smallestInRightSubtree = FindSmallestPrivate(root->right);
 			RemoveNodePrivate(smallestInRightSubtree, root);
 			root-> key = smallestInRightSubtree;
-			delete deletePtr;
+			delete delPtr;
 			cout<<" The root with the key"<< rootKey<< "was overwritten with key"<< root->key<< endl;
 		}
 
@@ -242,6 +242,72 @@ void BST::RemoveRootMatch(){
 		cout<< "The tree is empty"<<endl;
 	}
 }
+
+
+void BST::RemoveMatch(node* parent,node* match, bool left){
+	if(root!= NULL){
+		int smallestInRightSubtree;
+		int matchKey= match -> key;
+		node* delPtr;
+
+		//Case 1 with no children
+		if(match->left == NULL && match->right== NULL){
+			delPtr = match;
+			left == true? parent->left = NULL : parent->right = NULL;
+			delete delPtr;
+			cout<<" The node containing the match key "<< matchKey <<"was removed from the tree"<<endl;
+		}
+
+		//Case 2 with one children
+		else if(match->left == NULL && match->right != NULL){
+			left == true? parent->left = match->right : parent->right = match->right;
+			match->right = NULL;
+			delPtr = match;
+			delete delPtr;
+			cout<< "The node containing the match "<< matchKey<<" was removed from the tree and replaced by "<< endl;
+			
+		}
+
+		else if(match->left != NULL && match->right == NULL){
+			left ==true? parent->left= match->left: parent->right= match->left;
+			match->left = NULL;
+			delPtr= match;
+			delete delPtr; 
+			cout<< "The node containing the match "<< matchKey<<" was removed from the tree and replaced by "<< endl;
+			
+		}
+
+		// Case 3 with two children
+		else{
+			smallestInRightSubtree = FindSmallestPrivate(match->right);
+			RemoveNodePrivate(smallestInRightSubtree, match);
+			match-> key = smallestInRightSubtree;
+		}
+
+
+
+	}else{
+		cout<<"Match not found in the tree because the tree is empty."<<endl;
+	}
+}
+
+BST::~BST(){
+	RemoveSubtree(root);
+}
+
+void BST::RemoveSubtree(node* Ptr){
+	if( Ptr != NULL){
+		if(Ptr->left != NULL){
+			RemoveSubtree(Ptr->left);
+		}
+		if(Ptr->right != NULL){
+			RemoveSubtree(Ptr->right);
+		}
+		cout<<" Deleting the node containing key "<< Ptr->key << endl;
+		delete Ptr;
+	}
+}
+
 
 
 
