@@ -85,7 +85,8 @@ int main(int argc, const char * argv[]) {
     s -> push(1);
     s -> push(2);
     s -> push(3);
-  //  cout<< " 2 \n"<<endl;
+    s -> push(5);	  
+//  cout<< " 2 \n"<<endl;
     s -> display();
     //cout<<"display works \n" <<endl;
     s -> isEmpty();
