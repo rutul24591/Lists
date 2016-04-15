@@ -1,0 +1,463 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'gulp' ]
+2 info using npm@1.1.62
+3 info using node@v0.8.11
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'gulp', null ]
+7 silly cache add name=undefined spec="gulp" args=["gulp",null]
+8 verbose parsed url { pathname: 'gulp', path: 'gulp', href: 'gulp' }
+9 silly lockFile 9750c68d-gulp gulp
+10 verbose lock gulp /Users/Rutul/.npm/9750c68d-gulp.lock
+11 silly lockFile 9750c68d-gulp gulp
+12 verbose addNamed [ 'gulp', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile 72f4391e-gulp gulp@
+15 verbose lock gulp@ /Users/Rutul/.npm/72f4391e-gulp.lock
+16 silly addNameRange { name: 'gulp', range: '', hasData: false }
+17 verbose url raw gulp
+18 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+19 verbose url resolved https://registry.npmjs.org/gulp
+20 info trying registry request attempt 1 at 11:38:41
+21 verbose etag "1WP759FARU3TIXPWNVJ8Y7U62"
+22 http GET https://registry.npmjs.org/gulp
+23 http 304 https://registry.npmjs.org/gulp
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Mon, 14 Mar 2016 18:38:42 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'cache-control': 'max-age=300',
+24 silly registry.get     etag: '"1WP759FARU3TIXPWNVJ8Y7U62"',
+24 silly registry.get     age: '89',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-lax1420-LAX',
+24 silly registry.get     'x-cache': 'HIT',
+24 silly registry.get     'x-cache-hits': '2',
+24 silly registry.get     'x-timer': 'S1457980722.491116,VS0,VE1',
+24 silly registry.get     vary: 'Accept' } ]
+25 verbose etag gulp from cache
+26 silly addNameRange number 2 { name: 'gulp', range: '', hasData: true }
+27 silly addNameRange versions [ 'gulp',
+27 silly addNameRange   [ '0.0.1',
+27 silly addNameRange     '0.0.2',
+27 silly addNameRange     '0.0.3',
+27 silly addNameRange     '0.0.4',
+27 silly addNameRange     '0.0.5',
+27 silly addNameRange     '0.0.7',
+27 silly addNameRange     '0.0.8',
+27 silly addNameRange     '0.0.9',
+27 silly addNameRange     '0.1.0',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '1.0.0',
+27 silly addNameRange     '1.1.0',
+27 silly addNameRange     '1.2.0',
+27 silly addNameRange     '1.2.1',
+27 silly addNameRange     '2.0.0',
+27 silly addNameRange     '2.0.1',
+27 silly addNameRange     '2.1.0',
+27 silly addNameRange     '2.2.0',
+27 silly addNameRange     '2.3.0',
+27 silly addNameRange     '2.4.0',
+27 silly addNameRange     '2.4.1',
+27 silly addNameRange     '2.6.0',
+27 silly addNameRange     '2.6.1',
+27 silly addNameRange     '2.7.0',
+27 silly addNameRange     '3.0.0',
+27 silly addNameRange     '3.1.1',
+27 silly addNameRange     '3.1.2',
+27 silly addNameRange     '3.1.3',
+27 silly addNameRange     '3.1.4',
+27 silly addNameRange     '3.2.0',
+27 silly addNameRange     '3.2.1',
+27 silly addNameRange     '3.2.2',
+27 silly addNameRange     '3.2.3',
+27 silly addNameRange     '3.2.4',
+27 silly addNameRange     '3.2.5',
+27 silly addNameRange     '3.3.0',
+27 silly addNameRange     '3.3.1',
+27 silly addNameRange     '3.3.2',
+27 silly addNameRange     '3.3.4',
+27 silly addNameRange     '3.4.0',
+27 silly addNameRange     '3.9.0',
+27 silly addNameRange     '3.9.1' ] ]
+28 verbose addNamed [ 'gulp', '3.9.1' ]
+29 verbose addNamed [ '3.9.1', '3.9.1' ]
+30 silly lockFile d9f1ef79-gulp-3-9-1 gulp@3.9.1
+31 verbose lock gulp@3.9.1 /Users/Rutul/.npm/d9f1ef79-gulp-3-9-1.lock
+32 verbose read json /Users/Rutul/.npm/gulp/3.9.1/package/package.json
+33 silly lockFile d9f1ef79-gulp-3-9-1 gulp@3.9.1
+34 silly lockFile 72f4391e-gulp gulp@
+35 silly resolved [ { name: 'gulp',
+35 silly resolved     description: 'The streaming build system',
+35 silly resolved     version: '3.9.1',
+35 silly resolved     homepage: 'http://gulpjs.com',
+35 silly resolved     repository: { type: 'git', url: 'gulpjs/gulp' },
+35 silly resolved     author:
+35 silly resolved      { name: 'Fractal',
+35 silly resolved        email: 'contact@wearefractal.com',
+35 silly resolved        url: 'http://wearefractal.com/' },
+35 silly resolved     tags: [ 'build', 'stream', 'system', 'make', 'tool', 'asset', 'pipeline' ],
+35 silly resolved     files: [ 'index.js', 'lib', 'bin', 'completion', 'gulp.1' ],
+35 silly resolved     bin: { gulp: './bin/gulp.js' },
+35 silly resolved     man: [ 'gulp.1' ],
+35 silly resolved     dependencies:
+35 silly resolved      { archy: '^1.0.0',
+35 silly resolved        chalk: '^1.0.0',
+35 silly resolved        deprecated: '^0.0.1',
+35 silly resolved        'gulp-util': '^3.0.0',
+35 silly resolved        interpret: '^1.0.0',
+35 silly resolved        liftoff: '^2.1.0',
+35 silly resolved        minimist: '^1.1.0',
+35 silly resolved        orchestrator: '^0.3.0',
+35 silly resolved        'pretty-hrtime': '^1.0.0',
+35 silly resolved        semver: '^4.1.0',
+35 silly resolved        tildify: '^1.0.0',
+35 silly resolved        v8flags: '^2.0.2',
+35 silly resolved        'vinyl-fs': '^0.3.0' },
+35 silly resolved     devDependencies:
+35 silly resolved      { coveralls: '^2.7.0',
+35 silly resolved        eslint: '^1.7.3',
+35 silly resolved        'eslint-config-gulp': '^2.0.0',
+35 silly resolved        'graceful-fs': '^3.0.0',
+35 silly resolved        istanbul: '^0.3.0',
+35 silly resolved        jscs: '^2.3.5',
+35 silly resolved        'jscs-preset-gulp': '^1.0.0',
+35 silly resolved        'marked-man': '^0.1.3',
+35 silly resolved        mkdirp: '^0.5.0',
+35 silly resolved        mocha: '^2.0.1',
+35 silly resolved        'mocha-lcov-reporter': '^0.0.1',
+35 silly resolved        q: '^1.0.0',
+35 silly resolved        rimraf: '^2.2.5',
+35 silly resolved        should: '^5.0.1' },
+35 silly resolved     scripts:
+35 silly resolved      { prepublish: 'marked-man --name gulp docs/CLI.md > gulp.1',
+35 silly resolved        lint: 'eslint . && jscs *.js bin/ lib/ test/',
+35 silly resolved        pretest: 'npm run lint',
+35 silly resolved        test: 'mocha --reporter spec',
+35 silly resolved        coveralls: 'istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage' },
+35 silly resolved     engines: { node: '>= 0.9' },
+35 silly resolved     license: 'MIT',
+35 silly resolved     readme: '<p align="center">\n  <a href="http://gulpjs.com">\n    <img height="257" width="114" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">\n  </a>\n  <p align="center">The streaming build system</p>\n</p>\n\n[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]\n\n## What is gulp?\n\n- **Automation** - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.\n- **Platform-agnostic** - Integrations are built into all major IDEs and people are using gulp with PHP, .NET, Node.js, Java, and other platforms.\n- **Strong Ecosystem** - Use npm modules to do anything you want + over 2000 curated plugins for streaming file transformations\n- **Simple** - By providing only a minimal API surface, gulp is easy to learn and simple to use\n\n## Documentation\n\nFor a Getting started guide, API docs, recipes, making a plugin, etc. check out or docs!\n\n- Need something reliable? Check out the [documentation for the current release](/docs/README.md)!\n- Want to help us test the latest and greatest? Check out the [documentation for the next release](https://github.com/gulpjs/gulp/tree/4.0)!\n\n## Sample `gulpfile.js`\n\nThis file will give you a taste of what gulp does.\n\n```js\nvar gulp = require(\'gulp\');\nvar coffee = require(\'gulp-coffee\');\nvar concat = require(\'gulp-concat\');\nvar uglify = require(\'gulp-uglify\');\nvar imagemin = require(\'gulp-imagemin\');\nvar sourcemaps = require(\'gulp-sourcemaps\');\nvar del = require(\'del\');\n\nvar paths = {\n  scripts: [\'client/js/**/*.coffee\', \'!client/external/**/*.coffee\'],\n  images: \'client/img/**/*\'\n};\n\n// Not all tasks need to use streams\n// A gulpfile is just another node program and you can use any package available on npm\ngulp.task(\'clean\', function() {\n  // You can use multiple globbing patterns as you would with `gulp.src`\n  return del([\'build\']);\n});\n\ngulp.task(\'scripts\', [\'clean\'], function() {\n  // Minify and copy all JavaScript (except vendor scripts)\n  // with sourcemaps all the way down\n  return gulp.src(paths.scripts)\n    .pipe(sourcemaps.init())\n      .pipe(coffee())\n      .pipe(uglify())\n      .pipe(concat(\'all.min.js\'))\n    .pipe(sourcemaps.write())\n    .pipe(gulp.dest(\'build/js\'));\n});\n\n// Copy all static images\ngulp.task(\'images\', [\'clean\'], function() {\n  return gulp.src(paths.images)\n    // Pass in options to the task\n    .pipe(imagemin({optimizationLevel: 5}))\n    .pipe(gulp.dest(\'build/img\'));\n});\n\n// Rerun the task when a file changes\ngulp.task(\'watch\', function() {\n  gulp.watch(paths.scripts, [\'scripts\']);\n  gulp.watch(paths.images, [\'images\']);\n});\n\n// The default task (called when you run `gulp` from cli)\ngulp.task(\'default\', [\'watch\', \'scripts\', \'images\']);\n```\n\n## Incremental Builds\n\nWe recommend these plugins:\n\n- [gulp-changed](https://github.com/sindresorhus/gulp-changed) - only pass through changed files\n- [gulp-cached](https://github.com/contra/gulp-cached) - in-memory file cache, not for operation on sets of files\n- [gulp-remember](https://github.com/ahaurw01/gulp-remember) - pairs nicely with gulp-cached\n- [gulp-newer](https://github.com/tschaub/gulp-newer) - pass through newer source files only, supports many:1 source:dest\n\n## Want to contribute?\n\nAnyone can help make this project better - check out our [Contributing guide](/CONTRIBUTING.md)!\n\n[downloads-image]: https://img.shields.io/npm/dm/gulp.svg\n[npm-url]: https://www.npmjs.com/package/gulp\n[npm-image]: https://img.shields.io/npm/v/gulp.svg\n\n[travis-url]: https://travis-ci.org/gulpjs/gulp\n[travis-image]: https://img.shields.io/travis/gulpjs/gulp.svg\n\n[coveralls-url]: https://coveralls.io/r/gulpjs/gulp\n[coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp/master.svg\n\n[gitter-url]: https://gitter.im/gulpjs/gulp\n[gitter-image]: https://badges.gitter.im/gulpjs/gulp.png\n',
+35 silly resolved     _id: 'gulp@3.9.1',
+35 silly resolved     _from: 'gulp' } ]
+36 info install gulp@3.9.1 into /usr/local/lib
+37 info installOne gulp@3.9.1
+38 warn engine gulp@3.9.1: wanted: {"node":">= 0.9"} (current: {"node":"v0.8.11","npm":"1.1.62"})
+39 verbose from cache /Users/Rutul/.npm/gulp/3.9.1/package/package.json
+40 info /usr/local/lib/node_modules/gulp unbuild
+41 verbose read json /usr/local/lib/node_modules/gulp/package.json
+42 verbose tar unpack /Users/Rutul/.npm/gulp/3.9.1/package.tgz
+43 silly lockFile 709d00e5-usr-local-lib-node-modules-gulp /usr/local/lib/node_modules/gulp
+44 verbose lock /usr/local/lib/node_modules/gulp /Users/Rutul/.npm/709d00e5-usr-local-lib-node-modules-gulp.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm extractEntry README.md
+48 silly gunzTarPerm extractEntry index.js
+49 silly gunzTarPerm extractEntry bin/gulp.js
+50 silly gunzTarPerm extractEntry completion/README.md
+51 silly gunzTarPerm extractEntry completion/bash
+52 silly gunzTarPerm extractEntry completion/fish
+53 silly gunzTarPerm extractEntry completion/powershell
+54 silly gunzTarPerm extractEntry completion/zsh
+55 silly gunzTarPerm extractEntry gulp.1
+56 silly gunzTarPerm extractEntry lib/completion.js
+57 silly gunzTarPerm extractEntry lib/taskTree.js
+58 verbose read json /usr/local/lib/node_modules/gulp/package.json
+59 silly lockFile 709d00e5-usr-local-lib-node-modules-gulp /usr/local/lib/node_modules/gulp
+60 info preinstall gulp@3.9.1
+61 verbose from cache /usr/local/lib/node_modules/gulp/package.json
+62 verbose readDependencies using package.json deps
+63 verbose from cache /usr/local/lib/node_modules/gulp/package.json
+64 verbose readDependencies using package.json deps
+65 verbose cache add [ 'archy@^1.0.0', null ]
+66 silly cache add name=undefined spec="archy@^1.0.0" args=["archy@^1.0.0",null]
+67 verbose parsed url { pathname: 'archy@^1.0.0',
+67 verbose parsed url   path: 'archy@^1.0.0',
+67 verbose parsed url   href: 'archy@^1.0.0' }
+68 silly cache add name="archy" spec="^1.0.0" args=["archy","^1.0.0"]
+69 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+70 verbose addNamed [ 'archy', '^1.0.0' ]
+71 verbose addNamed [ null, null ]
+72 silly lockFile 91d41a90-archy-1-0-0 archy@^1.0.0
+73 verbose lock archy@^1.0.0 /Users/Rutul/.npm/91d41a90-archy-1-0-0.lock
+74 verbose cache add [ 'chalk@^1.0.0', null ]
+75 silly cache add name=undefined spec="chalk@^1.0.0" args=["chalk@^1.0.0",null]
+76 verbose parsed url { pathname: 'chalk@^1.0.0',
+76 verbose parsed url   path: 'chalk@^1.0.0',
+76 verbose parsed url   href: 'chalk@^1.0.0' }
+77 silly cache add name="chalk" spec="^1.0.0" args=["chalk","^1.0.0"]
+78 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+79 verbose addNamed [ 'chalk', '^1.0.0' ]
+80 verbose addNamed [ null, null ]
+81 silly lockFile 2b6848f7-chalk-1-0-0 chalk@^1.0.0
+82 verbose lock chalk@^1.0.0 /Users/Rutul/.npm/2b6848f7-chalk-1-0-0.lock
+83 verbose cache add [ 'deprecated@^0.0.1', null ]
+84 silly cache add name=undefined spec="deprecated@^0.0.1" args=["deprecated@^0.0.1",null]
+85 verbose parsed url { pathname: 'deprecated@^0.0.1',
+85 verbose parsed url   path: 'deprecated@^0.0.1',
+85 verbose parsed url   href: 'deprecated@^0.0.1' }
+86 silly cache add name="deprecated" spec="^0.0.1" args=["deprecated","^0.0.1"]
+87 verbose parsed url { pathname: '^0.0.1', path: '^0.0.1', href: '^0.0.1' }
+88 verbose addNamed [ 'deprecated', '^0.0.1' ]
+89 verbose addNamed [ null, null ]
+90 silly lockFile 0e32a569-deprecated-0-0-1 deprecated@^0.0.1
+91 verbose lock deprecated@^0.0.1 /Users/Rutul/.npm/0e32a569-deprecated-0-0-1.lock
+92 info addNameTag [ 'archy', '^1.0.0' ]
+93 info addNameTag [ 'chalk', '^1.0.0' ]
+94 info addNameTag [ 'deprecated', '^0.0.1' ]
+95 verbose url raw archy
+96 verbose url resolving [ 'https://registry.npmjs.org/', './archy' ]
+97 verbose url resolved https://registry.npmjs.org/archy
+98 info trying registry request attempt 1 at 11:38:42
+99 verbose etag "EE8VL8P4QJLV1EFN701P921M5"
+100 http GET https://registry.npmjs.org/archy
+101 verbose url raw chalk
+102 verbose url resolving [ 'https://registry.npmjs.org/', './chalk' ]
+103 verbose url resolved https://registry.npmjs.org/chalk
+104 info trying registry request attempt 1 at 11:38:42
+105 verbose etag "2YBIIN2WQY6D427724IC7VCXB"
+106 http GET https://registry.npmjs.org/chalk
+107 verbose url raw deprecated
+108 verbose url resolving [ 'https://registry.npmjs.org/', './deprecated' ]
+109 verbose url resolved https://registry.npmjs.org/deprecated
+110 info trying registry request attempt 1 at 11:38:42
+111 verbose etag "A0OJGOUI3CITZE9IYTTE44C2U"
+112 http GET https://registry.npmjs.org/deprecated
+113 verbose cache add [ 'gulp-util@^3.0.0', null ]
+114 silly cache add name=undefined spec="gulp-util@^3.0.0" args=["gulp-util@^3.0.0",null]
+115 verbose parsed url { pathname: 'gulp-util@^3.0.0',
+115 verbose parsed url   path: 'gulp-util@^3.0.0',
+115 verbose parsed url   href: 'gulp-util@^3.0.0' }
+116 silly cache add name="gulp-util" spec="^3.0.0" args=["gulp-util","^3.0.0"]
+117 verbose parsed url { pathname: '^3.0.0', path: '^3.0.0', href: '^3.0.0' }
+118 verbose addNamed [ 'gulp-util', '^3.0.0' ]
+119 verbose addNamed [ null, null ]
+120 silly lockFile dfa9a863-gulp-util-3-0-0 gulp-util@^3.0.0
+121 verbose lock gulp-util@^3.0.0 /Users/Rutul/.npm/dfa9a863-gulp-util-3-0-0.lock
+122 verbose cache add [ 'interpret@^1.0.0', null ]
+123 silly cache add name=undefined spec="interpret@^1.0.0" args=["interpret@^1.0.0",null]
+124 verbose parsed url { pathname: 'interpret@^1.0.0',
+124 verbose parsed url   path: 'interpret@^1.0.0',
+124 verbose parsed url   href: 'interpret@^1.0.0' }
+125 silly cache add name="interpret" spec="^1.0.0" args=["interpret","^1.0.0"]
+126 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+127 verbose addNamed [ 'interpret', '^1.0.0' ]
+128 verbose addNamed [ null, null ]
+129 silly lockFile ee77118f-interpret-1-0-0 interpret@^1.0.0
+130 verbose lock interpret@^1.0.0 /Users/Rutul/.npm/ee77118f-interpret-1-0-0.lock
+131 verbose cache add [ 'liftoff@^2.1.0', null ]
+132 silly cache add name=undefined spec="liftoff@^2.1.0" args=["liftoff@^2.1.0",null]
+133 verbose parsed url { pathname: 'liftoff@^2.1.0',
+133 verbose parsed url   path: 'liftoff@^2.1.0',
+133 verbose parsed url   href: 'liftoff@^2.1.0' }
+134 silly cache add name="liftoff" spec="^2.1.0" args=["liftoff","^2.1.0"]
+135 verbose parsed url { pathname: '^2.1.0', path: '^2.1.0', href: '^2.1.0' }
+136 verbose addNamed [ 'liftoff', '^2.1.0' ]
+137 verbose addNamed [ null, null ]
+138 silly lockFile 2d576056-liftoff-2-1-0 liftoff@^2.1.0
+139 verbose lock liftoff@^2.1.0 /Users/Rutul/.npm/2d576056-liftoff-2-1-0.lock
+140 verbose cache add [ 'minimist@^1.1.0', null ]
+141 silly cache add name=undefined spec="minimist@^1.1.0" args=["minimist@^1.1.0",null]
+142 verbose parsed url { pathname: 'minimist@^1.1.0',
+142 verbose parsed url   path: 'minimist@^1.1.0',
+142 verbose parsed url   href: 'minimist@^1.1.0' }
+143 silly cache add name="minimist" spec="^1.1.0" args=["minimist","^1.1.0"]
+144 verbose parsed url { pathname: '^1.1.0', path: '^1.1.0', href: '^1.1.0' }
+145 verbose addNamed [ 'minimist', '^1.1.0' ]
+146 verbose addNamed [ null, null ]
+147 silly lockFile b7cda548-minimist-1-1-0 minimist@^1.1.0
+148 verbose lock minimist@^1.1.0 /Users/Rutul/.npm/b7cda548-minimist-1-1-0.lock
+149 verbose cache add [ 'orchestrator@^0.3.0', null ]
+150 silly cache add name=undefined spec="orchestrator@^0.3.0" args=["orchestrator@^0.3.0",null]
+151 verbose parsed url { pathname: 'orchestrator@^0.3.0',
+151 verbose parsed url   path: 'orchestrator@^0.3.0',
+151 verbose parsed url   href: 'orchestrator@^0.3.0' }
+152 silly cache add name="orchestrator" spec="^0.3.0" args=["orchestrator","^0.3.0"]
+153 verbose parsed url { pathname: '^0.3.0', path: '^0.3.0', href: '^0.3.0' }
+154 verbose addNamed [ 'orchestrator', '^0.3.0' ]
+155 verbose addNamed [ null, null ]
+156 silly lockFile 74d9c599-orchestrator-0-3-0 orchestrator@^0.3.0
+157 verbose lock orchestrator@^0.3.0 /Users/Rutul/.npm/74d9c599-orchestrator-0-3-0.lock
+158 verbose cache add [ 'pretty-hrtime@^1.0.0', null ]
+159 silly cache add name=undefined spec="pretty-hrtime@^1.0.0" args=["pretty-hrtime@^1.0.0",null]
+160 verbose parsed url { pathname: 'pretty-hrtime@^1.0.0',
+160 verbose parsed url   path: 'pretty-hrtime@^1.0.0',
+160 verbose parsed url   href: 'pretty-hrtime@^1.0.0' }
+161 silly cache add name="pretty-hrtime" spec="^1.0.0" args=["pretty-hrtime","^1.0.0"]
+162 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+163 verbose addNamed [ 'pretty-hrtime', '^1.0.0' ]
+164 verbose addNamed [ null, null ]
+165 silly lockFile 81ac8ff0-pretty-hrtime-1-0-0 pretty-hrtime@^1.0.0
+166 verbose lock pretty-hrtime@^1.0.0 /Users/Rutul/.npm/81ac8ff0-pretty-hrtime-1-0-0.lock
+167 verbose cache add [ 'semver@^4.1.0', null ]
+168 silly cache add name=undefined spec="semver@^4.1.0" args=["semver@^4.1.0",null]
+169 verbose parsed url { pathname: 'semver@^4.1.0',
+169 verbose parsed url   path: 'semver@^4.1.0',
+169 verbose parsed url   href: 'semver@^4.1.0' }
+170 silly cache add name="semver" spec="^4.1.0" args=["semver","^4.1.0"]
+171 verbose parsed url { pathname: '^4.1.0', path: '^4.1.0', href: '^4.1.0' }
+172 verbose addNamed [ 'semver', '^4.1.0' ]
+173 verbose addNamed [ null, null ]
+174 silly lockFile 3aa770ad-semver-4-1-0 semver@^4.1.0
+175 verbose lock semver@^4.1.0 /Users/Rutul/.npm/3aa770ad-semver-4-1-0.lock
+176 verbose cache add [ 'tildify@^1.0.0', null ]
+177 silly cache add name=undefined spec="tildify@^1.0.0" args=["tildify@^1.0.0",null]
+178 verbose parsed url { pathname: 'tildify@^1.0.0',
+178 verbose parsed url   path: 'tildify@^1.0.0',
+178 verbose parsed url   href: 'tildify@^1.0.0' }
+179 silly cache add name="tildify" spec="^1.0.0" args=["tildify","^1.0.0"]
+180 verbose parsed url { pathname: '^1.0.0', path: '^1.0.0', href: '^1.0.0' }
+181 verbose addNamed [ 'tildify', '^1.0.0' ]
+182 verbose addNamed [ null, null ]
+183 silly lockFile b323af2b-tildify-1-0-0 tildify@^1.0.0
+184 verbose lock tildify@^1.0.0 /Users/Rutul/.npm/b323af2b-tildify-1-0-0.lock
+185 verbose cache add [ 'v8flags@^2.0.2', null ]
+186 silly cache add name=undefined spec="v8flags@^2.0.2" args=["v8flags@^2.0.2",null]
+187 verbose parsed url { pathname: 'v8flags@^2.0.2',
+187 verbose parsed url   path: 'v8flags@^2.0.2',
+187 verbose parsed url   href: 'v8flags@^2.0.2' }
+188 silly cache add name="v8flags" spec="^2.0.2" args=["v8flags","^2.0.2"]
+189 verbose parsed url { pathname: '^2.0.2', path: '^2.0.2', href: '^2.0.2' }
+190 verbose addNamed [ 'v8flags', '^2.0.2' ]
+191 verbose addNamed [ null, null ]
+192 silly lockFile f57003f9-v8flags-2-0-2 v8flags@^2.0.2
+193 verbose lock v8flags@^2.0.2 /Users/Rutul/.npm/f57003f9-v8flags-2-0-2.lock
+194 verbose cache add [ 'vinyl-fs@^0.3.0', null ]
+195 silly cache add name=undefined spec="vinyl-fs@^0.3.0" args=["vinyl-fs@^0.3.0",null]
+196 verbose parsed url { pathname: 'vinyl-fs@^0.3.0',
+196 verbose parsed url   path: 'vinyl-fs@^0.3.0',
+196 verbose parsed url   href: 'vinyl-fs@^0.3.0' }
+197 silly cache add name="vinyl-fs" spec="^0.3.0" args=["vinyl-fs","^0.3.0"]
+198 verbose parsed url { pathname: '^0.3.0', path: '^0.3.0', href: '^0.3.0' }
+199 verbose addNamed [ 'vinyl-fs', '^0.3.0' ]
+200 verbose addNamed [ null, null ]
+201 silly lockFile f9e5bbec-vinyl-fs-0-3-0 vinyl-fs@^0.3.0
+202 verbose lock vinyl-fs@^0.3.0 /Users/Rutul/.npm/f9e5bbec-vinyl-fs-0-3-0.lock
+203 info addNameTag [ 'gulp-util', '^3.0.0' ]
+204 info addNameTag [ 'interpret', '^1.0.0' ]
+205 info addNameTag [ 'liftoff', '^2.1.0' ]
+206 info addNameTag [ 'minimist', '^1.1.0' ]
+207 info addNameTag [ 'orchestrator', '^0.3.0' ]
+208 info addNameTag [ 'pretty-hrtime', '^1.0.0' ]
+209 info addNameTag [ 'semver', '^4.1.0' ]
+210 info addNameTag [ 'tildify', '^1.0.0' ]
+211 info addNameTag [ 'v8flags', '^2.0.2' ]
+212 info addNameTag [ 'vinyl-fs', '^0.3.0' ]
+213 verbose url raw gulp-util
+214 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-util' ]
+215 verbose url resolved https://registry.npmjs.org/gulp-util
+216 info trying registry request attempt 1 at 11:38:42
+217 verbose etag "5G5K45ZI5JE1DQVR4D7K5UUZ"
+218 http GET https://registry.npmjs.org/gulp-util
+219 verbose url raw interpret
+220 verbose url resolving [ 'https://registry.npmjs.org/', './interpret' ]
+221 verbose url resolved https://registry.npmjs.org/interpret
+222 info trying registry request attempt 1 at 11:38:42
+223 verbose etag "6OMB7EGGRO1EVB5KZMER48B7L"
+224 http GET https://registry.npmjs.org/interpret
+225 verbose url raw minimist
+226 verbose url resolving [ 'https://registry.npmjs.org/', './minimist' ]
+227 verbose url resolved https://registry.npmjs.org/minimist
+228 info trying registry request attempt 1 at 11:38:42
+229 verbose etag "J4U3Q0HIJDP2QN207OZNQ2QR"
+230 http GET https://registry.npmjs.org/minimist
+231 verbose url raw liftoff
+232 verbose url resolving [ 'https://registry.npmjs.org/', './liftoff' ]
+233 verbose url resolved https://registry.npmjs.org/liftoff
+234 info trying registry request attempt 1 at 11:38:42
+235 verbose etag "9PXOTSCB0Q2T8UNV2VVQKPBT9"
+236 http GET https://registry.npmjs.org/liftoff
+237 verbose url raw orchestrator
+238 verbose url resolving [ 'https://registry.npmjs.org/', './orchestrator' ]
+239 verbose url resolved https://registry.npmjs.org/orchestrator
+240 info trying registry request attempt 1 at 11:38:42
+241 verbose etag "3RGE0FPJ0S1JQ6ZYZXQUELXT9"
+242 http GET https://registry.npmjs.org/orchestrator
+243 verbose url raw pretty-hrtime
+244 verbose url resolving [ 'https://registry.npmjs.org/', './pretty-hrtime' ]
+245 verbose url resolved https://registry.npmjs.org/pretty-hrtime
+246 info trying registry request attempt 1 at 11:38:42
+247 verbose etag "E3IU39SLDGJ0XO2KU2UA9O6HV"
+248 http GET https://registry.npmjs.org/pretty-hrtime
+249 verbose url raw tildify
+250 verbose url resolving [ 'https://registry.npmjs.org/', './tildify' ]
+251 verbose url resolved https://registry.npmjs.org/tildify
+252 info trying registry request attempt 1 at 11:38:42
+253 verbose etag "2CC2F7FW8M2IW3LNQX9B1US1H"
+254 http GET https://registry.npmjs.org/tildify
+255 verbose url raw v8flags
+256 verbose url resolving [ 'https://registry.npmjs.org/', './v8flags' ]
+257 verbose url resolved https://registry.npmjs.org/v8flags
+258 info trying registry request attempt 1 at 11:38:42
+259 verbose etag "91F3IR7KMPQ3PHAK5CI86KDXJ"
+260 http GET https://registry.npmjs.org/v8flags
+261 verbose url raw semver
+262 verbose url resolving [ 'https://registry.npmjs.org/', './semver' ]
+263 verbose url resolved https://registry.npmjs.org/semver
+264 info trying registry request attempt 1 at 11:38:42
+265 verbose etag "SHHVNQMEDM4KD2JEHCYT7JXN"
+266 http GET https://registry.npmjs.org/semver
+267 verbose url raw vinyl-fs
+268 verbose url resolving [ 'https://registry.npmjs.org/', './vinyl-fs' ]
+269 verbose url resolved https://registry.npmjs.org/vinyl-fs
+270 info trying registry request attempt 1 at 11:38:42
+271 verbose etag "6OS4M6NUY6M0VO0999HXSA1PZ"
+272 http GET https://registry.npmjs.org/vinyl-fs
+273 http 304 https://registry.npmjs.org/deprecated
+274 silly registry.get cb [ 304,
+274 silly registry.get   { date: 'Mon, 14 Mar 2016 18:38:42 GMT',
+274 silly registry.get     via: '1.1 varnish',
+274 silly registry.get     'cache-control': 'max-age=300',
+274 silly registry.get     etag: '"A0OJGOUI3CITZE9IYTTE44C2U"',
+274 silly registry.get     age: '55',
+274 silly registry.get     connection: 'keep-alive',
+274 silly registry.get     'x-served-by': 'cache-lax1429-LAX',
+274 silly registry.get     'x-cache': 'HIT',
+274 silly registry.get     'x-cache-hits': '11',
+274 silly registry.get     'x-timer': 'S1457980722.715328,VS0,VE0',
+274 silly registry.get     vary: 'Accept' } ]
+275 verbose etag deprecated from cache
+276 silly lockFile 0e32a569-deprecated-0-0-1 deprecated@^0.0.1
+277 verbose about to build /usr/local/lib/node_modules/gulp
+278 info /usr/local/lib/node_modules/gulp unbuild
+279 verbose from cache /usr/local/lib/node_modules/gulp/package.json
+280 info preuninstall gulp@3.9.1
+281 info uninstall gulp@3.9.1
+282 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild gulp@3.9.1
+283 verbose /usr/local/bin,[object Object] binRoot
+284 info postuninstall gulp@3.9.1
+285 http 304 https://registry.npmjs.org/chalk
+286 silly registry.get cb [ 304,
+286 silly registry.get   { date: 'Mon, 14 Mar 2016 18:38:42 GMT',
+286 silly registry.get     via: '1.1 varnish',
+286 silly registry.get     'cache-control': 'max-age=300',
+286 silly registry.get     etag: '"2YBIIN2WQY6D427724IC7VCXB"',
+286 silly registry.get     age: '259',
+286 silly registry.get     connection: 'keep-alive',
+286 silly registry.get     'x-served-by': 'cache-lax1432-LAX',
+286 silly registry.get     'x-cache': 'HIT',
+286 silly registry.get     'x-cache-hits': '38',
+286 silly registry.get     'x-timer': 'S1457980722.725677,VS0,VE0',
+286 silly registry.get     vary: 'Accept' } ]
+287 verbose etag chalk from cache
+288 error Error: No compatible version found: deprecated@'^0.0.1'
+288 error Valid install targets:
+288 error ["0.0.1"]
+288 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:553:10)
+288 error     at /usr/local/lib/node_modules/npm/lib/cache.js:477:15
+288 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+288 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:218:7
+288 error     at Object.oncomplete (fs.js:297:15)
+289 error If you need help, you may report this log at:
+289 error     <http://github.com/isaacs/npm/issues>
+289 error or email it to:
+289 error     <npm-@googlegroups.com>
+290 error System Darwin 14.5.0
+291 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "gulp"
+292 error cwd /Users/Rutul/Documents/Xcode/LL/starpatterns
+293 error node -v v0.8.11
+294 error npm -v 1.1.62
+295 verbose exit [ 1, true ]
