@@ -66,3 +66,47 @@ void hashtable::AddItem(string name,string drink){
 	 	 Ptr->next=n;
 	 }
 }
+
+int hashtable::NumberOfItemsInIndex(int index){
+	int count =0;
+
+	if(HashTable[index]-> name == "empty"){
+		return count;
+	}else{
+		count++;   // count=1 for index item
+		item* Ptr = HashTable[index];
+
+		while(Ptr->next != NULL){
+			count++;
+			Ptr= Ptr->next;
+		}
+	}
+	return count;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
