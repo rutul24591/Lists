@@ -19,7 +19,7 @@ public:
 
 
 private:
-	static const int tableSize = 49;  // declaring it in the class and using it anywhere
+	static const int tableSize = 4;  // declaring it in the class and using it anywhere
 
 	struct item{
 		string name;

@@ -31,7 +31,7 @@ int main(int argc, char** argv){
 
 	Hushy.AddItem("Parth","any drink with loud music");
 
-	Hushy.AddItem("Rutul","Budweisser 12pack to occha pade")cd ..;
+	Hushy.AddItem("Rutul","Budweisser 12pack to occha pade");
 
 	Hushy.AddItem("Meet","Coke pan rutul khavanu to banay");
 
@@ -43,16 +43,29 @@ int main(int argc, char** argv){
 
 	Hushy.AddItem("Mohit","Chutayaoo ne party karva de hu mari kobi bateka banau");
 
+
+
+	Hushy.PrintTable();
 	// Hushy.PrintItemsInIndex(5);
 
-	while(name != "exit"){
-		cout<<"search for ";
-		cin>>name;
+	// while(name != "exit"){
+	// 	cout<<"search for ";
+	// 	cin>>name;
 
+	// 	if(name != "exit"){
+	// 		Hushy.FindDrink(name);
+	// 	}
+	// }
+
+	while(name != "exit"){
+		cout<< "Remove ";
+		cin>>name;
 		if(name != "exit"){
-			Hushy.FindDrink(name);
+			Hushy.RemoveItem(name);
 		}
+
 	}
 
+	Hushy.PrintTable();
 	return 0;
 }

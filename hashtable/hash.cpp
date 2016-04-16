@@ -165,14 +165,16 @@ void hashtable::RemoveItem(string name){
 		//Case 1- Only 1 item contained in bucket and that item has matching name
 
 		else if(HashTable[index]->name == name && HashTable[index]->next == NULL){
-			HashTable[index]->name == "empty";
-			HashTable[index]->drink =="empty";
+			HashTable[index]->name = "empty";
+			HashTable[index]->drink ="empty";
+
+			cout<< name<< " was removed from the hash table"<< endl;
 		}
 
 		// Case 2- Match found in the first location in the bucket but there are more items in the bucket
 		else if(HashTable[index]-> name == name){
 			delPtr = HashTable[index]; 
-			HashTable[index]= Hashtable[index]->next;
+			HashTable[index]= HashTable[index]->next;
 			delete delPtr;
 
 			cout<< name<< " was removed from the hash table" <<endl;
@@ -184,7 +186,7 @@ void hashtable::RemoveItem(string name){
 			P1= HashTable[index]->next;
 			P2 = HashTable[index];
 
-			while(P1 != NULL && P1->next != name){
+			while(P1 != NULL && P1->name != name){
 				P2= P1;
 				P1= P1->next;
 
