@@ -6,11 +6,16 @@ using namespace std;
 
 #include "hash.h"
 
-hashtable::hashtable(){			// this contructor just sets the tablesize to 100
-	tableSize = 100;
+hashtable::hashtable(){			// this contructor just sets the tablesize to 10
+	for(int i =0; i< tableSize; i++){
+		HashTable[i] = new item;
+		HashTable[i] -> name= "empty";
+		HashTable[i] -> drink= "empty";
+		HashTable[i] -> next = NULL;
+	}
 } 
 
-int hashtable::Hash(string key){
+int hashtable:: Hash(string key){
 
 	// table size is 100
 	//we enter key as 453.. so what we do is 453/100   quotient 4  remainder 53.... we use remainder 53 to return our index value.	
@@ -42,4 +47,22 @@ int hashtable::Hash(string key){
 
 	return index;
 
+}
+
+void hashtable::AddItem(string name,string drink){
+	int index= Hash(name);			// calls the Hash function that return the index where the name is to be stored
+	 if(HashTable[index]-> name == "empty"){
+	 	HashTable[index]->name = name;
+	 	HashTable[index]->drink = drink;
+	 }else{
+	 	 item* Ptr = HashTable[index];
+	 	 item* n = new item;
+	 	 n->name= name;
+	 	 n->drink =drink;
+	 	 n->next = NULL;
+	 	 while(Ptr->next != NULL){
+	 	 	Ptr= Ptr->next;
+	 	 }
+	 	 Ptr->next=n;
+	 }
 }
