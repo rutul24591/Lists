@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char** argv){
 
 	// int index;
-
+	string name= "";
 	// hashtable hashObj;
 
 	// index = hashObj.Hash("rutulamin");
@@ -43,11 +43,16 @@ int main(int argc, char** argv){
 
 	Hushy.AddItem("Mohit","Chutayaoo ne party karva de hu mari kobi bateka banau");
 
-	Hushy.PrintTable();
+	// Hushy.PrintItemsInIndex(5);
 
+	while(name != "exit"){
+		cout<<"search for ";
+		cin>>name;
 
-
-
+		if(name != "exit"){
+			Hushy.FindDrink(name);
+		}
+	}
 
 	return 0;
 }

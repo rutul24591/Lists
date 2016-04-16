@@ -21,15 +21,18 @@ int hashtable::Hash(string key){
 	//we enter key as 453.. so what we do is 453/100   quotient 4  remainder 53.... we use remainder 53 to return our index value.	
 
 	int hash = 0;
+	
 	int index;
 
 
 	index = key.length();
 
-
+ 
 	for(int i=0; i< key.length();i++){
-		hash = hash + (int)key[i];
-		//cout<<"The value of hash = " << hash << endl;    uncommenting this line will display ascii for each letter of each of the names specified
+		hash = (hash + (int)key[i])*13;
+		
+		// cout<< hash<< endl;
+		//cout<<"The value of hash = " << hash << endl;   // uncommenting this line will display ascii for each letter of each of the names specified
 	}
 
 	index = hash % tableSize;      // for getting the remainder as our index value;
@@ -63,7 +66,7 @@ void hashtable::AddItem(string name,string drink){
 	 	 while(Ptr->next != NULL){
 	 	 	Ptr= Ptr->next;
 	 	 }
-	 	 Ptr->next=n;
+	 	 Ptr->next =n;
 	 }
 }
 
@@ -98,6 +101,49 @@ void hashtable::PrintTable(){
 }
 
 
+void hashtable::PrintItemsInIndex(int index){
+
+
+	item* Ptr = HashTable[index];
+
+	if(Ptr->name == "empty"){
+		cout<<" Index =" << index << " is empty"<< endl;
+	}else{
+		cout<< " Index "<< index << " contains the following items\n";
+
+		while(Ptr != NULL){
+			cout<< " ------------------------\n";
+			cout<< Ptr->name << endl;
+			cout<< Ptr->drink << endl;
+			cout<< "-------------------------\n";
+
+			Ptr = Ptr->next;
+		}		
+	} 
+}
+
+void hashtable::FindDrink(string name){
+
+	int index = Hash(name);
+	bool foundName = false;
+	string drink;
+
+	item* Ptr = HashTable[index];
+	while(Ptr!= NULL){
+		if(Ptr->name == name){
+			foundName = true;
+			drink = Ptr->drink;
+		}
+		Ptr = Ptr->next;
+	}
+
+	if(foundName == true){
+		cout<< " Favorite drink of "<< name << " is : "<< drink << endl;
+	}
+	else{
+		cout<< name<< "'s drink was not found in the hash table.\n";
+	}
+}
 
 
 
