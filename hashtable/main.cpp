@@ -31,7 +31,7 @@ int main(int argc, char** argv){
 
 	Hushy.AddItem("Parth","any drink with loud music");
 
-	Hushy.AddItem("Rutul","Budweisser 12pack to occha pade");
+	Hushy.AddItem("Rutul","Budweisser 12pack to occha pade")cd ..;
 
 	Hushy.AddItem("Meet","Coke pan rutul khavanu to banay");
 

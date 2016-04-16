@@ -146,6 +146,31 @@ void hashtable::FindDrink(string name){
 }
 
 
+// Reomve Item section
+
+void hashtable::RemoveItem(string name){
+
+	int index= Hash(name);
+
+	item* delPtr;
+	item* P1;
+	item* P2;
+
+	// Case 0-- Bucket is empty
+		if(HashTable[index]-> name == "empty" && HashTable[index]-> drink =="empty"){
+			cout<< name << " was not found in the Hash table\n";
+		}
+
+
+		//Case 1- Only 1 item contained in bucket and that item has matching name
+
+		else if(HashTable[index]->name == name && HashTable[index]->next == NULL){
+			HashTable[index]->name == "empty";
+			HashTable[index]->drink =="empty";
+		}
+}
+
+
 
 
 
