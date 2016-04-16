@@ -15,7 +15,7 @@ hashtable::hashtable(){			// this contructor just sets the tablesize to 10
 	}
 } 
 
-int hashtable:: Hash(string key){
+int hashtable::Hash(string key){
 
 	// table size is 100
 	//we enter key as 453.. so what we do is 453/100   quotient 4  remainder 53.... we use remainder 53 to return our index value.	
@@ -29,7 +29,7 @@ int hashtable:: Hash(string key){
 
 	for(int i=0; i< key.length();i++){
 		hash = hash + (int)key[i];
-		cout<<"The value of hash = " << hash << endl;
+		//cout<<"The value of hash = " << hash << endl;    uncommenting this line will display ascii for each letter of each of the names specified
 	}
 
 	index = hash % tableSize;      // for getting the remainder as our index value;
@@ -82,6 +82,19 @@ int hashtable::NumberOfItemsInIndex(int index){
 		}
 	}
 	return count;
+}
+
+void hashtable::PrintTable(){
+	int number;
+	for(int i=0; i< tableSize; i++){
+		number= NumberOfItemsInIndex(i);
+		cout<< "---------------------------------------------\n";
+		cout<< "index: " << i  << endl;
+		cout<< HashTable[i] -> name << endl;
+		cout<< HashTable[i] -> drink << endl;
+		cout<<" # of items: " << number << endl; 
+		cout<< "---------------------------------------------\n";
+	}
 }
 
 
