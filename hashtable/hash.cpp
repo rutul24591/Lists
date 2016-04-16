@@ -168,6 +168,43 @@ void hashtable::RemoveItem(string name){
 			HashTable[index]->name == "empty";
 			HashTable[index]->drink =="empty";
 		}
+
+		// Case 2- Match found in the first location in the bucket but there are more items in the bucket
+		else if(HashTable[index]-> name == name){
+			delPtr = HashTable[index]; 
+			HashTable[index]= Hashtable[index]->next;
+			delete delPtr;
+
+			cout<< name<< " was removed from the hash table" <<endl;
+		}
+
+
+		// Case 3 Bucket contains items but first item is not the match
+		else{
+			P1= HashTable[index]->next;
+			P2 = HashTable[index];
+
+			while(P1 != NULL && P1->next != name){
+				P2= P1;
+				P1= P1->next;
+
+				// Case 3.1-- no match
+				if(P1 == NULL){
+					cout<< name <<" was not found in the hash table\n";
+				}
+				//Case 3.2-- Match found
+				else{
+					delPtr = P1;
+					P1= P1->next;
+					P2->next = P1;
+					delete delPtr; 
+					cout<< name << " was found an removed from the hash table \n" ;
+				}
+			}
+		}
+		
+
+
 }
 
 
