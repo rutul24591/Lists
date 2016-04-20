@@ -183,7 +183,7 @@ void hashtable::RemoveItem(string name){
 
 		// Case 3 Bucket contains items but first item is not the match
 		else{
-			P1= HashTable[index]->next;
+			P1 = HashTable[index]->next;
 			P2 = HashTable[index];
 
 			while(P1 != NULL && P1->name != name){

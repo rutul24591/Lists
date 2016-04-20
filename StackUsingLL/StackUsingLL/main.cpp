@@ -16,12 +16,15 @@ using namespace std;
 
 class stackLL{
 private:
-    struct node{
+        struct node{
         int data;
         node* next;
+        node* prev;
     };
     
     node* top;
+    node* p;
+    node* temp;
     int count;
     int capacity;
     
@@ -32,6 +35,8 @@ public:
             top = NULL;
             capacity = max;
             count = 0;
+            temp = NULL;
+            p= NULL;
         }
     
     void push(int data){
@@ -68,14 +73,34 @@ public:
     }
 
 
-void print(){
-    node* temp= top;
-    while( temp != NULL){
-        cout<< temp->data<<endl;
-        temp= temp->next;
+    void print(){
+        node* temp= top;
+        while( temp != NULL){
+                cout<< temp->data<<endl;
+                temp= temp->next;
+            }
         }
-    }
+    
+     void DeleteStack(){
+        
+        p= top;
+        while(p->next){
+                temp= p-> next;
+                p-> next= temp-> next;
+                cout<<temp->data<<endl;
+                delete temp;
+        }
+        if(top->data){
+            top= NULL;
+        }
+        delete p;
+    }    
+
+
+
 };
+
+   
     
 int main(int argc, char** argv){
 
@@ -96,6 +121,11 @@ int main(int argc, char** argv){
     s2->pop();
     s2->pop();
     cout<< "The new elements of stack are: "<<endl;
+    s2->print();
+
+    s2->DeleteStack();
+    // s2->pop();
+    cout<<" The elements in the stack after deletion:\n";
     s2->print();
     delete s2;
     return 0;

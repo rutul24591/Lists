@@ -46,7 +46,7 @@ int main(int argc, char** argv){
 
 
 	Hushy.PrintTable();
-	// Hushy.PrintItemsInIndex(5);
+	 // Hushy.PrintItemsInIndex(0);
 
 	// while(name != "exit"){
 	// 	cout<<"search for ";
